@@ -34,9 +34,37 @@ PRODUCT_MANUFACTURER := motorola
 PRODUCT_AAPT_CONFIG := xxxhdpi
 PRODUCT_AAPT_PREF_CONFIG := xxxhdpi
 
-# Boot animation
-TARGET_SCREEN_HEIGHT := 2340
-TARGET_SCREEN_WIDTH := 1080
+# Riced
+
+RICE_CHIPSET := "Snapdragon765G5G"
+
+RICE_MAINTAINER := "NivlaFX"
+
+# GMS build flags, if none were defined the package build type will be AOSP (default: false)
+WITH_GMS := true
+
+SUSHI_BOOTANIMATION := 1080
+
+# Graphene Camera
+TARGET_BUILD_GRAPHENEOS_CAMERA := false
+
+# Aperture Camera
+TARGET_BUILD_APERTURE_CAMERA := true
+
+# disable/enable blur support, default is false
+TARGET_ENABLE_BLUR := true
+
+# UDFPS ICONS/ANIMATIONS
+TARGET_HAS_UDFPS := true
+
+# Spoof build description/fingerprint as pixel device
+TARGET_USE_PIXEL_FINGERPRINT := true
+
+# NGA
+TARGET_SUPPORTS_NEXT_GEN_ASSISTANT := true
+
+# Google Telephony
+TARGET_USE_GOOGLE_TELEPHONY := true
 
 # Build info
 BUILD_FINGERPRINT := "motorola/racer_retail/racer:11/RPDS31.Q4U-39-26-14-3/ee443b:user/release-keys"
@@ -45,3 +73,9 @@ PRODUCT_BUILD_PROP_OVERRIDES += \
     PRIVATE_BUILD_DESC="racer_retail-user 11 RPDS31.Q4U-39-26-14-3 ee443b release-keys"
 
 PRODUCT_GMS_CLIENTID_BASE := android-motorola
+
+# Google Pixel 6 Fingerprint
+GOOGLE_BUILD_FINGERPRINT := google/oriole/oriole:13/TQ1A.230105.002/9325679:user/release-keys
+
+# GMS FINGERPRINT OVERIDE
+PRODUCT_OVERRIDE_GMS_FINGERPRINT=$(BUILD_FINGERPRINT)
