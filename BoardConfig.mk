@@ -18,6 +18,9 @@
 
 DEVICE_PATH := device/motorola/racer
 
+# Board Name for Fastboot compatibility
+TARGET_BOOTLOADER_BOARD_NAME := racer
+
 # Display
 TARGET_SCREEN_DENSITY := 420
 
